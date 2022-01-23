@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+nav ul {
+  position: relative;
+  margin: 2px 0 2px 20px;
+}
+
+nav ul::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: -10px;
+  width: 5px;
+  height: 100%;
+  border-left: 1px solid #000;
+}
+
+nav ul li {
+  position: relative;
+  list-style: none;
+}
+
+nav ul li::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 8px;
+  left: -10px;
+  width: 5px;
+  height: 100%;
+  border-top: 1px solid #000;
+}
+
+nav ul li:last-child::before {
+  background: #fff;
+  top: 10px;
+  bottom: 0;
+}
+
+nav > ul:first-child::before {
+  background: #fff;
+  top: 10px;
+  bottom: 0;
+}
+
+nav > ul > li:first-child::before {
+  background: #fff;
+  top: 10px;
+  bottom: 0;
+  visibility: hidden;
+}
